@@ -36,7 +36,24 @@
             <button id="btn2" class="btn2" onClick="sample1()">Pirmais uzdevums</button>
         </div>
 
+        <div class="task2">
+            <input type="text" id="guessInput">
+
+            <button id="btn3" class="btn3" onClick="task2()">Klikšķini mani!</button>
+            
+        </div>
+
         <script>
+
+            function task2(){
+                let word = document.getElementById("guessInput").value;
+
+                if(word == "Programmēšana"){
+                    document.getElementById("btn3").style.backgroundColor = "Green";
+                }else{
+                    document.getElementById("btn3").style.backgroundColor = "Red";
+                }
+            }
             function testFunction(){
                 console.log("Hello world!");
                 let a = 4;

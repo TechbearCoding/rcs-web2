@@ -30,7 +30,9 @@
         </div>
         <div class="buttons">
             <input type="text" id="testInput">
+
             <button class="btn1" onClick="testFunction()">Klikšķini mani!</button>
+            
             <button id="btn2" class="btn2" onClick="sample1()">Pirmais uzdevums</button>
         </div>
 
@@ -55,15 +57,11 @@
 
             }
             function sample1(){
-                let result = 0;
-                
-                for(let i = 1; i<11; i++){
-                    result = result + i;
-                }
+
                 document.getElementById("btn2").style.backgroundColor = "green";
 
                 let userInput = document.getElementById("testInput").value;
-                
+
                 alert(userInput);
             }
 

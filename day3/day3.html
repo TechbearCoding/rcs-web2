@@ -31,11 +31,30 @@
         <div class="task2">
             <input type="text" id="testInput">
 
-            <button id="btn3" class="btn3" onClick="task1()">Klikšķini mani!</button>
+            <button id="btn3" class="btn3" onClick="task2()">Klikšķini mani!</button>
             
         </div>
 
         <script>
+
+            function task2(){
+                let userInput = document.getElementById("testInput").value;
+                
+                if(userInput==""){
+                    alert("Jāievada vērtība");
+                    return;
+                }
+
+                let arr = userInput.split(" ");
+                let longestWord = arr[0];
+                
+                for(let i = 1; i<arr.length; i++){
+                    if(longestWord.length < arr[i].length && isNaN(arr[i])== true){
+                        longestWord = arr[i];
+                    }
+                }
+                alert(longestWord);
+            }
 
             function task1(){
                 let userInput = document.getElementById("testInput").value;
